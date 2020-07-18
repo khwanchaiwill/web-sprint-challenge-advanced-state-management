@@ -24,10 +24,29 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What problem does the context API help solve?
+
+  Answer: Can helo pass down the data quickly and do not need the props to use wtih the component that we need to pass down the data anymore.
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+  Answer: 'action' are payloads that send data from application to store, They are the source for store using with dispatch.
+      'reducers' : Is specify how the application's state changes in response to actions thatsend to the store. 
+      'store' : Holds the state tree of the application. The only way to change the state inside is by using the dispatch to an action on it. 
+      Th store is known as a source of truth mean the store will can get only 
+      
+
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+  Answer: Application state is global but component state is just a local state. 
+
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+  Answer: 'redux-thunk is the node package to make the flows asynchornous maek API calls from the actuin creators.
+          It's changing up the action creators to perform asynchornours API calls 
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+  Answer: The Async Redux is my favorite, even it alittle complicate to understand at first but once I understand, it is really fun to work and give me a easy way to do API call,
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 

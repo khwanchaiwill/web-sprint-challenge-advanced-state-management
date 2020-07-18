@@ -2,5 +2,112 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: aliceblue;
+  background: radial-gradient( rgb(207, 253, 231), rgb(11, 167, 133));
+}
+header{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+}
+.head-title{
+  width: 100%;
+ 
+}
+.nav-div{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+}
+.direction{
+  width: 40%;
+  padding: 1% 0;
+  text-decoration: none;
+  background-image: linear-gradient(to left, hotpink, pink);
+  align-items: space;
+  border-radius: 20px 30px ;
+}
+.app-render{
+  display: flex;  
+  padding: 0 2%;
+  justify-content: center;
+  align-items: center;
+}
+.smurf-form{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: radial-gradient( rgb(207, 253, 231), rgb(11, 167, 133),rgb(11, 167, 133), rgb(77, 248, 77), rgb(67, 158, 6) );
+}
+
+.form-input{
+  width:60%;
+  height: 30vh;
+  padding: 0 3%;
+  background: radial-gradient( rgb(207, 253, 231), rgb(11, 167, 133));
+  border-radius: 50%;
+
+}
+form{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 9% 0;
+  font-size: 1.2rem;
+  padding: 1.2% 0 0 0;
+
+}
+button{
+  margin-bottom: 3%;
+  font-size: 1.3rem;
+  background-color: unset;
+  font-weight: 1000;
+  border: 5px double( rgb(167, 11, 45),red);
+  padding: 1.5%;
+  border-radius: 20px;
+  box-shadow: gray 10px 20px 30px;
+}
+button:focus{
+  outline: none;
+}
+input{
+  border-radius: 50%;
+  background-image:radial-gradient( black,rgb(207, 253, 231), rgb(207, 253, 231), rgb(11, 167, 133));
+  border: none;
+  font-size: 1rem;
+  box-shadow: gray 10px 20px 30px;
+
+}
+.age{
+  border-radius: 50%;
+  background-image:radial-gradient( rgb(238, 63, 63),rgb(207, 253, 231), rgb(207, 253, 231), rgb(11, 167, 133));
+  border: none;
+  font-size: 1rem;
+  box-shadow: gray 10px 20px 30px;
+
+}
+input:focus{
+  outline: none;
+}
+.smurflist{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+ 
+}
+.smurf-itemlist{
+  width: 45%;
+  box-shadow: 1px 10px 10px  rgb(4, 39, 1); 
+  margin-bottom: 5%;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px gray;
 }

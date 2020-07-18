@@ -1,36 +1,33 @@
-import React, { useState } from  'react';
-import { connect } from 'react-redux'
-import { addSmurfs } from '../action/smurfAction'
+import React, { useState, useEffect } from  'react';
+import { useRouteMatch, NavLink } from 'react-router-dom'
 
-
-import SmurfsForm from './SmurfForm'
 
 const SmurfLists = (props) => {
-    const [ addText, setAddText ] =useState("")
+    console.log(props)
 
-    const handleChange = e  => {
-        setAddText(e.target.value)
-    }
+    const { url } = useRouteMatch()
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        {props.addSmurfs(addText)}
-        setAddText("")
-    }
+    useEffect(()=> {
+        props.getSmurfData()
+        
+    }, [])
 
+    
     return(
         <div className="get-smurf">
-            <SmurfsForm 
-                handleChange={handleChange}
-                handleSubmit={handleSubmit} 
-                addText={props.addText}
-            />
-            <div>
+            <div  className="smurflist">
                 {
-                    props.map(item => (
-                        <div>
+                    props.smurf.map(item => (
+                        
+                        <div className="smurf-itemlist" key={item.id}>
                             <p> {item.name} </p>
+                            <p> {item.age}</p>
+                            <p> {item.height} </p>
+                        <NavLink to={`${url}/${item.id}`}>    
+                            <button>See indevidual Card</button>
+                        </NavLink>
                         </div>
+                        
                     ))
                 }
             </div>
@@ -38,15 +35,14 @@ const SmurfLists = (props) => {
     )
     
 }
-const mapStateToProps = state => {
-    console.log(state)
-    return {
-        name: state.name,
-        age: state.age,
-        height: state.height
-    }
-}
-export default connect(
-    mapStateToProps ,
-    {addSmurfs}
-) (SmurfLists);
+// const mapStateToProps = state => {
+//     console.log(state)
+//     return {
+//         smurf: state.smurf
+//     }
+// }
+// export default connect(
+//     mapStateToProps ,
+//     {getSmurfData}
+// ) (SmurfLists);
+export default SmurfLists;
